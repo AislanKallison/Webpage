@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garrafa Térmica Vyta</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="product-container">
+        <h1>GARRAFA TERMICA VYTA</h1>
+        <img id="productImage" src="/img/garrafa-termica-preta.jpeg" alt="Garrafa Térmica Vyta">
+        <p>500ML</p>
+        <p class="price">R$270,00</p>
+        <p>ou em até 10x de R$27.00</p>
+        
+        <label>Escolha o tamanho:</label>
+        <div class="size-options">
+            <button class="size-option" data-size="350ml">350ml</button>
+            <button class="size-option" data-size="500ml">500ml</button>
+            <button class="size-option" data-size="650ml">650ml</button>
+            <button class="size-option" data-size="950ml">950ml</button>
+            <button class="size-option" data-size="1200ml">1200ml</button>
+        </div>
+
+        <label>Escolha a cor:</label>
+        <div class="color-options">
+            <div class="color-option" data-color="preto" data-image="/img/garrafa-termica-preta.jpeg">
+                <img src="/img/garrafa-termica-preta.jpeg" alt="Garrafa Preta">
+                <p>Preto</p>
+            </div>
+            <div class="color-option" data-color="branco" data-image="/img/garrafa-termica-branca.jpeg">
+                <img src="/img/garrafa-termica-branca.jpeg" alt="Garrafa Branca">
+                <p>Branco</p>
+            </div>
+            <div class="color-option" data-color="azul" data-image="/img/garrafa-termica-azul.jpeg">
+                <img src="/img/garrafa-termica-azul.jpeg" alt="Garrafa Azul">
+                <p>Azul</p>
+            </div>
+            <div class="color-option" data-color="vermelho" data-image="/img/garrafa-termica-vermelha.jpeg">
+                <img src="/img/garrafa-termica-vermelha.jpeg" alt="Garrafa Vermelha">
+                <p>Vermelho</p>
+            </div>
+        </div>
+
+        <label>Quantidade:</label>
+        <div class="quantity-selector">
+            <button onclick="decreaseQuantity()">-</button>
+            <span id="quantity">1</span>
+            <button onclick="increaseQuantity()">+</button>
+        </div>
+
+        <div class="personalization-section">
+            <h2>Personalização: R$ 30,00</h2>
+        </div>
+
+        <button class="personalize-button" onclick="personalizar()">PERSONALIZAR</button>
+    </div> 
+    <div class="text-orientation-section">
+        <label>Texto:</label>
+        <input type="text" id="customText" maxlength="20" placeholder="Digite o texto (max 20 caracteres)">
+        
+        <label>Orientacao do Texto:</label>
+        <select id="textOrientation">
+            <option value="horizontal">Horizontal</option>
+            <option value="vertical">Vertical</option>
+        </select>
+    </div> 
+    <div class="preview-section">
+        <canvas id="previewCanvas" width="908" height="908"></canvas>
+    </div> 
+    <label>Escolha a fonte:</label>
+<select id="fontSelector">      
+    <option value="Simpliza Regular">Simpliza Regular</option>
+    <option value="Arial">Arial</option>
+    <option value="Times New Roman">Times New Roman</option>
+    <!-- Adicione mais fontes conforme necessário -->
+</select>
+
+    <script src="script.js"></script>
+</body>
+</html>
